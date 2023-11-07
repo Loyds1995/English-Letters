@@ -37,13 +37,12 @@ img, video, svg, picture, canvas{
     margin-right: auto;
     padding-left: 10px;
     padding-right: 10px;
-    border: 2px solid red;
+    /* border: 2px solid red; */
    
 }
 
 /* ----HEADER----- */
 .header{
-    border: 2px solid red solid red;
     padding:5px;
     background: linear-gradient(120deg, red, orange,yellow,green,blue,indigo, violet);
     margin: 10px 10px 1rem 10px;
@@ -116,7 +115,6 @@ img, video, svg, picture, canvas{
 footer{
     font-size: 1.2rem;
     font-weight: 900;
-    border: 2px solid red solid red;
     padding:5px;
     background: linear-gradient(120deg, red, orange,yellow,green,blue,indigo, violet);
     margin: 10px 10px 1rem 10px;
