@@ -1,0 +1,226 @@
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Collegiate+One&family=Chakra+Petch:wght@700&family=M+PLUS+1p&family=Permanent+Marker&family=Press+Start+2P&display=swap');
+
+:root{
+ --clr-sky:#0ea5e9;
+ --clr-slate:#cbd5e1;
+ --clr-red:#dc2626;
+}
+
+/* RGB(255, 0, 0)	red
+RGB(255, 165, 0)	orange
+RGB(255, 255, 0)	yellow
+RGB(0, 128, 0)	green
+RGB(0, 0, 255)	blue
+RGB(75, 0, 130)	indigo
+RGB(238, 130, 238)	violet/ */
+
+*, 
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+*{
+    margin:0;
+    padding: 0;
+}
+html{scroll-behavior: smooth;}
+
+img, video, svg, picture, canvas{
+    display: block;
+    max-width: 100%;
+}
+
+
+/* ----HEADER----- */
+.header{
+    border: 2px solid red solid red;
+    padding:10px;
+    background: linear-gradient(120deg, red, orange,yellow,green,blue,indigo, violet);
+    margin: 10px 10px 1rem 10px;
+    
+}
+
+.header h1{
+    font-weight: 900;
+    font-family: 'chakra petch', Arial, Helvetica, sans-serif;
+    border: 5px double black;
+    width: fit-content;
+    padding: 5px;
+    /* background: linear-gradient(100deg, red, orange,yellow,green,blue,indigo, violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent; */
+}
+/* ----END OF HEADER----- */
+
+.hr-line{
+    margin-inline: 10px;
+}
+
+/* -----alphabets-container---- */
+.alphabets-container{
+    display: flex;
+    justify-content: center;
+    gap: 2px;
+    color: var(--clr-red);
+    font-size: 1.1rem;
+    margin-block: 0.8rem;
+}
+/* -----END of alphabets-container---- */
+
+/* ---letters-container--- */
+.letters-container img{
+    width:50px;
+}
+
+.letters-container{
+    border: 2px solid red;
+    margin-inline: 10px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px,1fr));
+    gap: 5px;
+    
+}
+
+.letter-con{
+    border: 5px solid var(--clr-sky);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+
+.letter-con p{
+    font-weight: 500;
+    font-size: 0.8rem;
+    font-family: 'chakra petch', Arial, Helvetica, sans-serif;
+}
+
+.letter-con.popup{
+    position:absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background-color: white;
+    box-shadow: 5px 5px black;
+    z-index: 999;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+}
+
+.letter-con.popup .letter-img{ 
+   width: 100%;
+}
+
+
+/* ---END of letters-container--- */
+
+/* --FOOTER--- */
+
+.footer{
+    background: linear-gradient(120deg, red, orange,yellow,green,blue,indigo, violet);
+    margin: 10px;
+    padding: 20px;
+    font-weight: 900;
+    text-decoration: underline;
+    font-size: 1.5rem;
+}
+/* --END of FOOTER--- */
+
+
+@media (min-width: 481px) and (max-width: 767px){
+    /* -----alphabets-container---- */
+    .alphabets-container{
+        font-size: 1.3rem;
+        gap: 3px;
+}
+/* -----END of alphabets-container---- */
+}
+
+
+
+@media (min-width: 768px)  {
+    /* ----HEADER----- */
+.header{
+    padding:20px;
+    
+}
+.hr-line, .header, .footer {
+    margin-inline: 50px;
+}
+
+/* ----END OF HEADER----- */
+
+
+/* -----alphabets-container---- */
+.alphabets-container{
+    gap: 5px;
+    font-size: 1.5rem;
+}
+/* -----END of alphabets-container---- */
+
+/* ---letters-container--- */
+
+.letters-container{
+    margin-inline: 50px;
+    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+    gap: 5px;
+}
+
+.letter-con{
+    justify-content: left;
+}
+.letters-container img{
+    width: max(30%, 50px);
+    margin: 0 auto;
+}
+
+.letter-con p{
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.letter-con.popup {
+    padding:none;
+    width: min(50%, 500px)
+}
+
+.letter-con.popup .letter-img{ 
+    width: 50%;
+ }
+/* ---END of letters-container--- */
+
+@media (min-width:1024px) {
+    .alphabets-container{
+        gap: 10px;
+        font-size: 1.5rem;
+    }
+}
+
+}
+
+@media (min-width: 1281px){
+    /* -----alphabets-container---- */
+    .alphabets-container{
+        gap: 20px;
+        font-size: 2rem;
+    }
+/* -----END of alphabets-container---- */
+
+    .letters-container{
+        margin-inline: 50px;
+        grid-template-columns: repeat(6,1fr);
+        gap: 5px;
+    }
+
+    .letter-con p{
+        
+        font-size: 1.5rem;
+    }
+    
+    .letter-con.popup .letter-img{ 
+        width: 100%;
+     }
+}
