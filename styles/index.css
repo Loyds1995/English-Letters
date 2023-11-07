@@ -31,26 +31,32 @@ img, video, svg, picture, canvas{
     max-width: 100%;
 }
 
+.container{
+    width:100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid red;
+   
+}
 
 /* ----HEADER----- */
 .header{
     border: 2px solid red solid red;
-    padding:10px;
+    padding:5px;
     background: linear-gradient(120deg, red, orange,yellow,green,blue,indigo, violet);
     margin: 10px 10px 1rem 10px;
-    
+    display: flex;
+    justify-content: center;
 }
 
-.header h1{
+.header h2{
     font-weight: 900;
     font-family: 'chakra petch', Arial, Helvetica, sans-serif;
     border: 5px double black;
     width: fit-content;
     padding: 5px;
-    /* background: linear-gradient(100deg, red, orange,yellow,green,blue,indigo, violet);
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent; */
 }
 /* ----END OF HEADER----- */
 
@@ -58,169 +64,132 @@ img, video, svg, picture, canvas{
     margin-inline: 10px;
 }
 
-/* -----alphabets-container---- */
 .alphabets-container{
+    /* border: 2px solid blue; */
     display: flex;
     justify-content: center;
-    gap: 2px;
-    color: var(--clr-red);
-    font-size: 1.1rem;
-    margin-block: 0.8rem;
+    color:var(--clr-red) ;
+    padding-block: 10px;
+    font-weight: 900;
 }
-/* -----END of alphabets-container---- */
-
-/* ---letters-container--- */
-.letters-container img{
-    width:50px;
-}
-
 .letters-container{
-    border: 2px solid red;
-    margin-inline: 10px;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(70px,1fr));
-    gap: 5px;
-    
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(55px,1fr));
+  gap: 2px;
 }
 
 .letter-con{
-    border: 5px solid var(--clr-sky);
+    border: 2px solid var(--clr-sky);
     display: flex;
+    flex-direction: column;
+    text-align: center;
     align-items: center;
     justify-content: center;
     position:relative;
+    font-size: 12px;
+    font-weight: 900;
 }
-
-.letter-con p{
-    font-weight: 500;
-    font-size: 0.8rem;
-    font-family: 'chakra petch', Arial, Helvetica, sans-serif;
+.letter-con img{
+    width: 50%;
+   display: inline-block;
 }
 
 .letter-con.popup{
-    position:absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    background-color: white;
-    box-shadow: 5px 5px black;
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--clr-slate);
+    box-shadow: 5px 5px var(--clr-sky);
     z-index: 999;
-    padding: 10px;
+    /* padding: 10px; */
     text-align: center;
-    font-size: 2rem;
-}
-
-.letter-con.popup .letter-img{ 
-   width: 100%;
-}
-
-
-/* ---END of letters-container--- */
-
-/* --FOOTER--- */
-
-.footer{
-    background: linear-gradient(120deg, red, orange,yellow,green,blue,indigo, violet);
-    margin: 10px;
-    padding: 20px;
-    font-weight: 900;
-    text-decoration: underline;
     font-size: 1.5rem;
 }
-/* --END of FOOTER--- */
 
-
-@media (min-width: 481px) and (max-width: 767px){
-    /* -----alphabets-container---- */
-    .alphabets-container{
-        font-size: 1.3rem;
-        gap: 3px;
-}
-/* -----END of alphabets-container---- */
+.letter-con.popup .letter-img{
+    width:50%;
 }
 
-
-
-@media (min-width: 768px)  {
-    /* ----HEADER----- */
-.header{
-    padding:20px;
-    
-}
-.hr-line, .header, .footer {
-    margin-inline: 50px;
-}
-
-/* ----END OF HEADER----- */
-
-
-/* -----alphabets-container---- */
-.alphabets-container{
-    gap: 5px;
-    font-size: 1.5rem;
-}
-/* -----END of alphabets-container---- */
-
-/* ---letters-container--- */
-
-.letters-container{
-    margin-inline: 50px;
-    grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
-    gap: 5px;
-}
-
-.letter-con{
-    justify-content: left;
-}
-.letters-container img{
-    width: max(30%, 50px);
-    margin: 0 auto;
-}
-
-.letter-con p{
-    font-weight: 700;
+footer{
     font-size: 1.2rem;
+    font-weight: 900;
+    border: 2px solid red solid red;
+    padding:5px;
+    background: linear-gradient(120deg, red, orange,yellow,green,blue,indigo, violet);
+    margin: 10px 10px 1rem 10px;
 }
 
-.letter-con.popup {
-    padding:none;
-    width: min(50%, 500px)
-}
-
-.letter-con.popup .letter-img{ 
-    width: 50%;
- }
-/* ---END of letters-container--- */
-
-@media (min-width:1024px) {
-    .alphabets-container{
-        gap: 10px;
-        font-size: 1.5rem;
+@media (min-width:468px) {
+    .container{
+        max-width: 468px;
     }
-}
-
-}
-
-@media (min-width: 1281px){
-    /* -----alphabets-container---- */
     .alphabets-container{
-        gap: 20px;
-        font-size: 2rem;
+       gap: 2px;
     }
-/* -----END of alphabets-container---- */
+    .letters-container{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(70px,1fr));
+        gap: 2px;
+      }
+}
+
+@media (min-width:768px) {
+    .container{
+        max-width: 768px;
+    }
+
+    .header{
+        justify-content:flex-start;
+    }
+
+    .alphabets-container{
+        gap:4px;
+    }
 
     .letters-container{
-        margin-inline: 50px;
-        grid-template-columns: repeat(6,1fr);
-        gap: 5px;
+        grid-template-columns: repeat(auto-fit, minmax(90px,1fr));
+      }
+    .letter-con{
+        font-size: 16px;
     }
-
-    .letter-con p{
-        
-        font-size: 1.5rem;
+    .letter-con.popup{
+        width: 300px;
+        height: 300px;
     }
     
-    .letter-con.popup .letter-img{ 
-        width: 100%;
-     }
+    .letter-con.popup .letter-img{
+        width:80%;
+    }
+    
+}
+
+@media (min-width:1024px) {
+    .container{
+        max-width: 1024px;
+    }
+
+    .alphabets-container{
+        gap:6px;
+    }
+    .letters-container{
+        grid-template-columns: repeat(auto-fit, minmax(120px,1fr));
+      }
+
+}
+
+@media (min-width:1680px) {
+    .container{
+        max-width: 1680px;
+    }
+
+    .alphabets-container{
+        gap: 1.2rem;
+        font-size: 1.2rem;
+    }
+    .letters-container{
+        grid-template-columns: repeat(8, 200px);
+      }
 }
